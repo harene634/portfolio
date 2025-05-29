@@ -1,68 +1,104 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
   color: #333;
 }
 
 header {
-  background-color: #0066cc;
+  background: #0073e6;
   color: white;
+  padding: 3em 1em;
   text-align: center;
+  animation: fadeIn 2s ease-in;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
   padding: 2em 1em;
 }
 
 h1 {
+  font-size: 2.8em;
   margin: 0;
-  font-size: 2.5em;
-}
-
-section {
-  padding: 2em;
-  max-width: 900px;
-  margin: auto;
-  background: white;
-  margin-bottom: 1.5em;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 h2 {
-  color: #0066cc;
+  color: #0073e6;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.3em;
 }
 
-.project-card {
-  background: #e6f0ff;
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 2em;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5em;
+}
+
+.project {
+  background: #f5fbff;
+  border-left: 5px solid #0073e6;
   padding: 1em;
-  margin-bottom: 1em;
-  border-left: 5px solid #3399ff;
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
-ul {
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
   list-style: none;
   padding: 0;
 }
 
-ul li::before {
-  content: "✔️";
-  margin-right: 10px;
-  color: green;
+.skills li {
+  background: #0073e6;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 20px;
+  font-size: 0.9em;
 }
 
-a {
-  color: #0066cc;
+.links {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin: 0.5em 0;
+}
+
+.links a {
+  color: #0073e6;
   text-decoration: none;
+  font-weight: 500;
 }
 
-a:hover {
+.links a:hover {
   text-decoration: underline;
 }
 
 footer {
-  background-color: #222;
-  color: white;
   text-align: center;
-  padding: 1em;
+  background: #00264d;
+  color: white;
+  padding: 1.5em;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
